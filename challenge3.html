@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge 4</title>
+  <!-- Google Font: Major Mono Display -->
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    
+    <style>
+    .errorMsg { 
+      font-family: 'Major Mono Display', monospace;
+      color:red;
+      display:none; } 
+    </style>
+    
+    <script>
+    function checkForm(){
+   
+      var nm = document.querySelector('#name');
+     
+      var addr = document.querySelector('#addr');
+    
+      var nmE = document.querySelector('#nameError');
+
+      var addrE = document.querySelector('#addressError');
+
+      var valid = true
+
+      if (nm.value == '') {
+        nmE.style.display = 'block';
+        nm.style.border = '2px solid red';
+        valid = false;
+      }
+      else {
+        nmE.style.display = 'none';
+        nm.style.border = '';
+      }
+
+      if (addr.value == '') {
+        addrE.style.display = 'block';
+        addr.style.border = '2px solid red';
+        valid = false
+      }
+      else {
+        addrE.style.display = 'none';
+        addr.style.border = '';
+      }
+
+      return valid;
+
+    }  
+    </script>
+</head>
+<body>
+    <h1>Challenge 3</h1>
+  <form action="challenge4.html" onsubmit="return checkForm();">
+        <fieldset>
+        <legend>Personal details</legend>
+          <label for="name">Full name: </label>
+            <input type="text" name="fullname" id="name"><br/>
+            <p class="errorMsg" id="nameError">Please enter your name above!</p>
+
+          <label for ="streetaddr"></label>
+            Street Address:
+            <input type="text" name="addr" id="addr">
+            <p class="errorMsg" id="addressError">Please enter your street address!</p>
+        </fieldset>
+        <input type="submit" value="Submit it!"> 
+    </form>
+</body>
+</html>

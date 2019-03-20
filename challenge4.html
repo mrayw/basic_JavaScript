@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }           
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    
+    function upDate(x) {
+        var text = x.alt;
+        // var link = "\"url('"+x.src+"')\"";
+        var link = x.src;
+        console.log(link);
+        
+        document.querySelector('#image').innerHTML = text; 
+        document.querySelector('#image').style.backgroundImage = "url('"+link+"')";  
+       
+        
+        }
+    
+
+    function unDo(){
+        document.querySelector('#image').innerHTML = "Hover or tab over/into an image below.";
+        document.querySelector('#image').style.backgroundImage = 'none';
+    }
+
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 4</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <img class = "preview" tabindex = "1" alt = "Styling without a Bandana" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT54PnQdGq_NJiqbrSm-GDPfOr2XqCYl8IQu3jYnF6yRyUVioA" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()">
+
+        <img class = "preview" tabindex = "1" alt = "Without My Boy" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1oaLjdB9GIkBHz-ukUDrru5snFSC0-dlkV8CQhnX_2-EHUY5Tdg" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()">
+    
+        <img class = "preview" tabindex = "1" src = "https://cdn.pixabay.com/photo/2014/08/16/16/01/children-419432_960_720.jpg" alt = "Young Without Puppy" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()">
+
+        <img class = "preview" tabindex = "1" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOpw8ZNmiAvoeKsg2xKmSyEZnUDFhByY0PjyeAwKlic2tpLlyM" alt = "Not-Colleen's-Son and Puppy" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()">
+
+        <img class = "preview" tabindex = "1" src = "https://c1.staticflickr.com/1/608/22576732248_493f0acf5b_b.jpg" alt = "Not-Colleen's-Daughter and Dog" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()">
+
+        <img class = "preview" tabindex = "1" src = "https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg" alt = "Not-Colleen's-Nor-Anyone's Puppy" onfocus = "upDate(this)" onblur = "unDo()" onmouseover="upDate(this)" onmouseleave="unDo()">
+</body>
+</html>
+    
